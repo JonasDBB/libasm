@@ -6,7 +6,7 @@
 /*   By: jbennink <jbennink@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/03 15:25:24 by jbennink      #+#    #+#                 */
-/*   Updated: 2020/06/18 13:32:04 by jbennink      ########   odam.nl         */
+/*   Updated: 2020/06/18 14:59:21 by jbennink      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -281,7 +281,5 @@ int	main(int ac, char **av)
 			{teststrdup("REAL", strdup); teststrdup("MINE", ft_strdup);}
 		i++;
 	}
-	// ssize_t (int, const void *, size_t)
-	// ssize_t (*)(int, void *, size_t)
 	return (0);
 }
