@@ -6,7 +6,7 @@
 ;    By: jbennink <jbennink@student.codam.nl>         +#+                      ;
 ;                                                    +#+                       ;
 ;    Created: 2020/06/10 16:35:21 by jbennink      #+#    #+#                  ;
-;    Updated: 2020/06/17 14:08:36 by jbennink      ########   odam.nl          ;
+;    Updated: 2020/06/18 13:28:20 by jbennink      ########   odam.nl          ;
 ;                                                                              ;
 ; **************************************************************************** ;
 
@@ -17,10 +17,10 @@ _ft_strcpy:
 	xor		rax, rax
 
 _loop:
-	cmp		[rsi + rax], byte 0
-	je		_end
 	mov		rcx, [rsi + rax]
 	mov		[rdi + rax], rcx
+	cmp		[rsi + rax], byte 0
+	je		_end
 	inc		rax
 	jmp		_loop
 

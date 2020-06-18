@@ -1,3 +1,4 @@
-./test
+test
 *.o
 numbers.txt
+libasm.a

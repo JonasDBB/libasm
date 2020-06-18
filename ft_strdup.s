@@ -6,7 +6,7 @@
 ;    By: jbennink <jbennink@student.codam.nl>         +#+                      ;
 ;                                                    +#+                       ;
 ;    Created: 2020/06/10 16:37:40 by jbennink      #+#    #+#                  ;
-;    Updated: 2020/06/17 14:47:40 by jbennink      ########   odam.nl          ;
+;    Updated: 2020/06/18 13:28:35 by jbennink      ########   odam.nl          ;
 ;                                                                              ;
 ; **************************************************************************** ;
 
@@ -20,6 +20,7 @@ _ft_strdup:
 	push	rdi
 	call	_ft_strlen
 	mov		rcx, rax
+	inc		rcx
 	mov		rdi, rcx
 	call	_malloc
 	pop		rsi

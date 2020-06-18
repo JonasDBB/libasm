@@ -6,7 +6,7 @@
 /*   By: jbennink <jbennink@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/03 15:25:24 by jbennink      #+#    #+#                 */
-/*   Updated: 2020/06/18 13:15:16 by jbennink      ########   odam.nl         */
+/*   Updated: 2020/06/18 13:32:04 by jbennink      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,10 +91,10 @@ static void	teststrcpy(void)
 	char *mdst2 = malloc(strlen(src2) + 1);
 	printf("real:\nbefore:\tsrc  is =%s=\n\trdst is =%s=\n", src2, rdst2);
 	printf("return: =%s=\n", strcpy(rdst2, src2));
-	printf("after:\tsrc  is =%s=\n\trdst is =%s=\n", src2, rdst2);
+	printf("after:\t\n\trdst is =%s=\n", rdst2);
 	printf("mine:\nbefore:\tsrc  is =%s=\n\tmdst is =%s=\n", src2, mdst2);
 	printf("return: =%s=\n", ft_strcpy(mdst2, src2));
-	printf("after:\tsrc  is =%s=\n\tmdst is =%s=\n\n", src2, mdst2);
+	printf("after:\t\n\tmdst is =%s=\n\n", mdst2);
 	free(src2);
 	free(rdst2);
 	free(mdst2);
@@ -239,18 +239,18 @@ static void	teststrdup(char *which, char* (whichdup)(const char*))
 {
 	printf("\n\t  ==%s==\n\t==FT_STRDUP==\n\n", which);
 	//=============================//
-	printf("string is =%s=\n", STR0);
-	char *s0 = strdup(STR0);
+	printf("EMPTYstring is =%s=\n", STR_EMPTY);
+	char *s0 = whichdup(STR_EMPTY);
 	printf("result: =%s=\n", s0);
 	free(s0);
 	//=============================//
-	printf("string is =%s=\n", STR_EMPTY);
-	char *s1 = strdup(STR_EMPTY);
+	printf("string is =%s=\n", STR1);
+	char *s1 = whichdup(STR1);
 	printf("result: =%s=\n", s1);
 	free(s1);
 	//=============================//
 	printf("string is =%s=\n", STR_LONG);
-	char *s2 = strdup(STR_LONG);
+	char *s2 = whichdup(STR_LONG);
 	printf("result: =%s=\n", s2);
 	free(s2);
 }

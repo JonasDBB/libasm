@@ -6,7 +6,7 @@
 #    By: jbennink <jbennink@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/06/10 14:57:33 by jbennink      #+#    #+#                  #
-#    Updated: 2020/06/18 13:16:39 by jbennink      ########   odam.nl          #
+#    Updated: 2020/06/18 13:17:32 by jbennink      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,8 +34,7 @@ $(NAME): $(OBJS)
 	ar rcs $(NAME) $^
 
 test: $(NAME) $(MAIN) $(OBJS)
-	gcc $(MAIN) -L. -lasm -o test
-# NOT USING FLAGS RIGHT NOW -L. -lasm
+	gcc $(FLAGS) $(MAIN) -L. -lasm -o test
 
 clean:
 	rm -f $(OBJS)
