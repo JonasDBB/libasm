@@ -6,7 +6,7 @@
 /*   By: jbennink <jbennink@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/06/03 15:25:24 by jbennink      #+#    #+#                 */
-/*   Updated: 2020/06/18 14:59:21 by jbennink      ########   odam.nl         */
+/*   Updated: 2020/06/19 16:17:57 by jbennink      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,7 @@ static void	testwrite(void)
 	if (errno)
 		perror("error msg is");
 	errno = 0;
-	printf("\nmine: %lu\n", write(1, "write\n", 3));
+	printf("\nmine: %lu\n", ft_write(1, "write\n", 3));
 	printf("errno is %i\n", errno);
 	if (errno)
 		perror("error msg is");
@@ -156,7 +156,7 @@ static void	testwrite(void)
 	if (errno)
 		perror("error msg is");
 	errno = 0;
-	printf("\nmine: %lu\n", write(1, "write\n", 6));
+	printf("\nmine: %lu\n", ft_write(1, "write\n", 6));
 	printf("errno is %i\n", errno);
 	if (errno)
 		perror("error msg is");
@@ -168,7 +168,7 @@ static void	testwrite(void)
 	if (errno)
 		perror("error msg is");
 	errno = 0;
-	printf("\nmine: %lu\n", write(1, "write\n", 8));
+	printf("\nmine: %lu\n", ft_write(1, "write\n", 8));
 	printf("errno is %i\n", errno);
 	if (errno)
 		perror("error msg is");
@@ -180,7 +180,7 @@ static void	testwrite(void)
 	if (errno)
 		perror("error msg is");
 	errno = 0;
-	printf("\nmine: %lu\n", write(-1, "write\n", 6));
+	printf("\nmine: %lu\n", ft_write(-1, "write\n", 6));
 	printf("errno is %i\n", errno);
 	if (errno)
 		perror("error msg is");
@@ -192,7 +192,7 @@ static void	testwrite(void)
 	if (errno)
 		perror("error msg is");
 	errno = 0;
-	printf("\nmine: %lu\n", write(fd, "write\n", 6));
+	printf("\nmine: %lu\n", ft_write(fd, "write\n", 6));
 	printf("errno is %i\n", errno);
 	if (errno)
 		perror("error msg is");
